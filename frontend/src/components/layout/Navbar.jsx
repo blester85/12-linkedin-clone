@@ -60,8 +60,8 @@ const Navbar = () => {
                 >
                   <Users size={20} />
                   <span className='text-xs hidden md:block'>My Network</span>
-                  {/* unreadConnectionRequestsCount > 0 */}
-                  {true && (
+
+                  {unreadConnectionRequestsCount > 0 && (
                     <span className='absolute -top-1 -right-1 md:right-4 bg-blue-500 text-white text-xs rounded-full size-3 md:size-4 flex items-center justify-center'>
                       {unreadConnectionRequestsCount}
                     </span>
@@ -73,8 +73,8 @@ const Navbar = () => {
                 >
                   <Bell size={20} />
                   <span className='text-xs hidden md:block'>Notifications</span>
-                  {/* unreadNotificationCount > 0 */}
-                  {true && (
+
+                  {unreadNotificationCount > 0 && (
                     <span className='absolute -top-1 -right-1 md:right-4 bg-blue-500 text-white text-xs rounded-full size-3 md:size-4 flex items-center justify-center'>
                       {unreadNotificationCount}
                     </span>
