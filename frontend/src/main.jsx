@@ -41,6 +41,18 @@ const queryClient = new QueryClient({
           return connectionRequests;
         }
 
+        if (key === 'recommendedUsers') {
+          const res = await axiosInstance.get('/users/suggestions');
+
+          return res.data;
+        }
+
+        if (key === 'posts') {
+          const res = await axiosInstance.get('/posts');
+
+          return res.data;
+        }
+
         console.log(`No default query function defined for key: ${key}`);
         throw new Error(`No default query function defined for key: ${key}`);
       }
